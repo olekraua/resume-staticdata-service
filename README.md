@@ -1,27 +1,15 @@
-# staticdata-service
+# resume-staticdata-service
 
-Standalone repository for the staticdata-service microservice.
+Single-service repository for `microservices/backend/services/staticdata-service`.
 
-## Local build
+## Build
+`./mvnw -pl microservices/backend/services/staticdata-service -am -DskipTests package`
 
-```bash
-./mvnw -pl microservices/backend/services/staticdata-service -am -Dmaven.test.skip=true package
-```
+## Run
+`./mvnw -pl microservices/backend/services/staticdata-service -am spring-boot:run`
 
-## Local run
+## Shared libraries
+This service depends on artifacts from `resume-platform-libs`.
 
-```bash
-./mvnw -pl microservices/backend/services/staticdata-service -am spring-boot:run
-```
-
-## Included modules
-
-- shared
-- staticdata
-- profile
-- notification
-- auth
-- media
-- web
-- microservices/backend/services/staticdata-service
-
+Install/update shared libraries before building service repos:
+`cd ../resume-platform-libs && ./mvnw -DskipTests install`
