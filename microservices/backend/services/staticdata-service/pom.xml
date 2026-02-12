@@ -22,7 +22,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>net.devstudy</groupId>
-			<artifactId>resume-web</artifactId>
+			<artifactId>resume-staticdata</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.devstudy</groupId>
+			<artifactId>resume-shared</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
